@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Концелярский_Нож.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="notepadFilename" Type="System.String" Scope="User">
+      <Value Profile="(Default)">notepad.rtf</Value>
+    </Setting>
+    <Setting Name="Концелярский_Нож_RBKServise_DailyInfo" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

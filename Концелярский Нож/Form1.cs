@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Form1.cs" company="Trainian">
+//   Тестируем и создаём
+// </copyright>
+// <summary>
+//   Defines the Form1 type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace Концелярский_Нож
 {
+    using System;
     using System.IO;
-    using System.Web.Security;
-    using System.Web.UI.WebControls;
+    using System.Windows.Forms;
     using System.Xml;
 
+    /// <summary>
+    /// Main Form.Главная форма.
+    /// </summary>
     public partial class Form1 : Form
     {
         private string notepadFilename;

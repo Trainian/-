@@ -744,7 +744,7 @@
             // 
             // tb_Red
             // 
-            this.tb_Red.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tb_Red.BackColor = System.Drawing.SystemColors.Control;
             this.tb_Red.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Red.Location = new System.Drawing.Point(3, 3);
             this.tb_Red.Maximum = 255;
@@ -757,7 +757,7 @@
             // 
             // tb_Green
             // 
-            this.tb_Green.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.tb_Green.BackColor = System.Drawing.SystemColors.Control;
             this.tb_Green.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Green.Location = new System.Drawing.Point(80, 3);
             this.tb_Green.Maximum = 255;
@@ -770,7 +770,7 @@
             // 
             // tb_Blue
             // 
-            this.tb_Blue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.tb_Blue.BackColor = System.Drawing.SystemColors.Control;
             this.tb_Blue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Blue.Location = new System.Drawing.Point(156, 3);
             this.tb_Blue.Maximum = 255;
@@ -794,7 +794,9 @@
             // blueLabel
             // 
             this.blueLabel.AutoSize = true;
+            this.blueLabel.BackColor = System.Drawing.Color.Blue;
             this.blueLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.blueLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.blueLabel.Location = new System.Drawing.Point(156, 321);
             this.blueLabel.Name = "blueLabel";
             this.blueLabel.Size = new System.Drawing.Size(70, 20);
@@ -805,7 +807,9 @@
             // greenLabel
             // 
             this.greenLabel.AutoSize = true;
+            this.greenLabel.BackColor = System.Drawing.Color.Green;
             this.greenLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.greenLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.greenLabel.Location = new System.Drawing.Point(80, 321);
             this.greenLabel.Name = "greenLabel";
             this.greenLabel.Size = new System.Drawing.Size(70, 20);
@@ -816,7 +820,9 @@
             // redLabel
             // 
             this.redLabel.AutoSize = true;
+            this.redLabel.BackColor = System.Drawing.Color.Red;
             this.redLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.redLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.redLabel.Location = new System.Drawing.Point(3, 321);
             this.redLabel.Name = "redLabel";
             this.redLabel.Size = new System.Drawing.Size(71, 20);

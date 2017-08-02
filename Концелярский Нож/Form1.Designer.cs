@@ -697,6 +697,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 610F));
+            this.tableLayoutPanel1.Controls.Add(this.blueLabel, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.greenLabel, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.redLabel, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.pb_ColorCreater, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.tb_Red, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tb_Green, 1, 0);
@@ -704,8 +707,9 @@
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 341F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 341F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 341F));
@@ -734,7 +738,7 @@
             this.pb_ColorCreater.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pb_ColorCreater.Location = new System.Drawing.Point(232, 3);
             this.pb_ColorCreater.Name = "pb_ColorCreater";
-            this.pb_ColorCreater.Size = new System.Drawing.Size(604, 335);
+            this.pb_ColorCreater.Size = new System.Drawing.Size(604, 315);
             this.pb_ColorCreater.TabIndex = 0;
             this.pb_ColorCreater.TabStop = false;
             // 
@@ -747,7 +751,7 @@
             this.tb_Red.Name = "tb_Red";
             this.tb_Red.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.tb_Red.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tb_Red.Size = new System.Drawing.Size(71, 335);
+            this.tb_Red.Size = new System.Drawing.Size(71, 315);
             this.tb_Red.TabIndex = 1;
             this.tb_Red.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
@@ -760,7 +764,7 @@
             this.tb_Green.Name = "tb_Green";
             this.tb_Green.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.tb_Green.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tb_Green.Size = new System.Drawing.Size(70, 335);
+            this.tb_Green.Size = new System.Drawing.Size(70, 315);
             this.tb_Green.TabIndex = 1;
             this.tb_Green.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
@@ -772,7 +776,7 @@
             this.tb_Blue.Maximum = 255;
             this.tb_Blue.Name = "tb_Blue";
             this.tb_Blue.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.tb_Blue.Size = new System.Drawing.Size(70, 335);
+            this.tb_Blue.Size = new System.Drawing.Size(70, 315);
             this.tb_Blue.TabIndex = 1;
             this.tb_Blue.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
@@ -790,38 +794,41 @@
             // blueLabel
             // 
             this.blueLabel.AutoSize = true;
-            this.blueLabel.Location = new System.Drawing.Point(204, 394);
+            this.blueLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.blueLabel.Location = new System.Drawing.Point(156, 321);
             this.blueLabel.Name = "blueLabel";
-            this.blueLabel.Size = new System.Drawing.Size(25, 13);
+            this.blueLabel.Size = new System.Drawing.Size(70, 20);
             this.blueLabel.TabIndex = 4;
             this.blueLabel.Text = "255";
+            this.blueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // greenLabel
             // 
             this.greenLabel.AutoSize = true;
-            this.greenLabel.Location = new System.Drawing.Point(129, 395);
+            this.greenLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.greenLabel.Location = new System.Drawing.Point(80, 321);
             this.greenLabel.Name = "greenLabel";
-            this.greenLabel.Size = new System.Drawing.Size(25, 13);
+            this.greenLabel.Size = new System.Drawing.Size(70, 20);
             this.greenLabel.TabIndex = 5;
             this.greenLabel.Text = "255";
+            this.greenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // redLabel
             // 
             this.redLabel.AutoSize = true;
-            this.redLabel.Location = new System.Drawing.Point(52, 394);
+            this.redLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.redLabel.Location = new System.Drawing.Point(3, 321);
             this.redLabel.Name = "redLabel";
-            this.redLabel.Size = new System.Drawing.Size(25, 13);
+            this.redLabel.Size = new System.Drawing.Size(71, 20);
             this.redLabel.TabIndex = 6;
             this.redLabel.Text = "255";
+            this.redLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 450);
-            this.Controls.Add(this.redLabel);
-            this.Controls.Add(this.greenLabel);
-            this.Controls.Add(this.blueLabel);
             this.Controls.Add(this.tc_Menu);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);

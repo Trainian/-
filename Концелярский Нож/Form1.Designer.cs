@@ -100,6 +100,9 @@
             this.tb_Blue = new System.Windows.Forms.TrackBar();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timer_Remember = new System.Windows.Forms.Timer(this.components);
+            this.blueLabel = new System.Windows.Forms.Label();
+            this.greenLabel = new System.Windows.Forms.Label();
+            this.redLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -544,7 +547,7 @@
             this.tp_Remember.Location = new System.Drawing.Point(4, 22);
             this.tp_Remember.Name = "tp_Remember";
             this.tp_Remember.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Remember.Size = new System.Drawing.Size(657, 347);
+            this.tp_Remember.Size = new System.Drawing.Size(845, 347);
             this.tp_Remember.TabIndex = 1;
             this.tp_Remember.Text = "Напоминалка";
             this.tp_Remember.UseVisualStyleBackColor = true;
@@ -606,7 +609,7 @@
             this.tb_LifeTime.Controls.Add(this.dtp_StartTime);
             this.tb_LifeTime.Location = new System.Drawing.Point(4, 22);
             this.tb_LifeTime.Name = "tb_LifeTime";
-            this.tb_LifeTime.Size = new System.Drawing.Size(657, 347);
+            this.tb_LifeTime.Size = new System.Drawing.Size(845, 347);
             this.tb_LifeTime.TabIndex = 2;
             this.tb_LifeTime.Text = "Длительность жизни";
             this.tb_LifeTime.UseVisualStyleBackColor = true;
@@ -662,7 +665,7 @@
             this.tb_CursValue.Controls.Add(this.rtb_CoursValue);
             this.tb_CursValue.Location = new System.Drawing.Point(4, 22);
             this.tb_CursValue.Name = "tb_CursValue";
-            this.tb_CursValue.Size = new System.Drawing.Size(657, 347);
+            this.tb_CursValue.Size = new System.Drawing.Size(845, 347);
             this.tb_CursValue.TabIndex = 3;
             this.tb_CursValue.Text = "Курс валют";
             this.tb_CursValue.UseVisualStyleBackColor = true;
@@ -672,7 +675,7 @@
             this.rtb_CoursValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rtb_CoursValue.Location = new System.Drawing.Point(0, 0);
             this.rtb_CoursValue.Name = "rtb_CoursValue";
-            this.rtb_CoursValue.Size = new System.Drawing.Size(657, 347);
+            this.rtb_CoursValue.Size = new System.Drawing.Size(845, 347);
             this.rtb_CoursValue.TabIndex = 0;
             this.rtb_CoursValue.Text = "";
             // 
@@ -737,7 +740,7 @@
             // 
             // tb_Red
             // 
-            this.tb_Red.BackColor = System.Drawing.Color.Red;
+            this.tb_Red.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tb_Red.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Red.Location = new System.Drawing.Point(3, 3);
             this.tb_Red.Maximum = 255;
@@ -750,7 +753,7 @@
             // 
             // tb_Green
             // 
-            this.tb_Green.BackColor = System.Drawing.Color.Green;
+            this.tb_Green.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.tb_Green.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Green.Location = new System.Drawing.Point(80, 3);
             this.tb_Green.Maximum = 255;
@@ -763,7 +766,7 @@
             // 
             // tb_Blue
             // 
-            this.tb_Blue.BackColor = System.Drawing.Color.Blue;
+            this.tb_Blue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.tb_Blue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tb_Blue.Location = new System.Drawing.Point(156, 3);
             this.tb_Blue.Maximum = 255;
@@ -784,11 +787,41 @@
             this.timer_Remember.Interval = 1000;
             this.timer_Remember.Tick += new System.EventHandler(this.timer_Remember_Tick);
             // 
+            // blueLabel
+            // 
+            this.blueLabel.AutoSize = true;
+            this.blueLabel.Location = new System.Drawing.Point(204, 394);
+            this.blueLabel.Name = "blueLabel";
+            this.blueLabel.Size = new System.Drawing.Size(25, 13);
+            this.blueLabel.TabIndex = 4;
+            this.blueLabel.Text = "255";
+            // 
+            // greenLabel
+            // 
+            this.greenLabel.AutoSize = true;
+            this.greenLabel.Location = new System.Drawing.Point(129, 395);
+            this.greenLabel.Name = "greenLabel";
+            this.greenLabel.Size = new System.Drawing.Size(25, 13);
+            this.greenLabel.TabIndex = 5;
+            this.greenLabel.Text = "255";
+            // 
+            // redLabel
+            // 
+            this.redLabel.AutoSize = true;
+            this.redLabel.Location = new System.Drawing.Point(52, 394);
+            this.redLabel.Name = "redLabel";
+            this.redLabel.Size = new System.Drawing.Size(25, 13);
+            this.redLabel.TabIndex = 6;
+            this.redLabel.Text = "255";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 450);
+            this.Controls.Add(this.redLabel);
+            this.Controls.Add(this.greenLabel);
+            this.Controls.Add(this.blueLabel);
             this.Controls.Add(this.tc_Menu);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
@@ -900,6 +933,9 @@
         private System.Windows.Forms.TrackBar tb_Red;
         private System.Windows.Forms.TrackBar tb_Green;
         private System.Windows.Forms.TrackBar tb_Blue;
+        private System.Windows.Forms.Label blueLabel;
+        private System.Windows.Forms.Label greenLabel;
+        private System.Windows.Forms.Label redLabel;
     }
 }
 

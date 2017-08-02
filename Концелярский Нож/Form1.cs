@@ -55,7 +55,10 @@ namespace Концелярский_Нож
             this.tb_Blue.DataBindings.Add("Value", rgb, "Blue");
             this.tb_Blue.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged;
 
-            this.tb_Red.
+            // Binding Labels Value
+            redLabel.DataBindings.Add("Text", tb_Red, "Value");
+            blueLabel.DataBindings.Add("Text", tb_Blue, "Value");
+            greenLabel.DataBindings.Add("Text", tb_Green, "Value");
         }
 
         private void timer1_Tick(object sender, EventArgs e)

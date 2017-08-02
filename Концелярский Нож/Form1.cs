@@ -22,6 +22,10 @@ namespace Концелярский_Нож
         private string notepadFilename;
 
         private bool textChanged;
+
+        public BindingSource bindSrc = new BindingSource();
+
+        public Memo memo = new Memo();
         public Form1()
         {
             InitializeComponent();
@@ -56,9 +60,9 @@ namespace Концелярский_Нож
             this.tb_Blue.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged;
 
             // Binding Labels Value
-            redLabel.DataBindings.Add("Text", tb_Red, "Value");
-            blueLabel.DataBindings.Add("Text", tb_Blue, "Value");
-            greenLabel.DataBindings.Add("Text", tb_Green, "Value");
+            this.redLabel.DataBindings.Add("Text", this.tb_Red, "Value");
+            this.blueLabel.DataBindings.Add("Text", this.tb_Blue, "Value");
+            this.greenLabel.DataBindings.Add("Text", this.tb_Green, "Value");
         }
 
         private void timer1_Tick(object sender, EventArgs e)

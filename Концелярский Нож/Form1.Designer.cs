@@ -103,6 +103,10 @@
             this.blueLabel = new System.Windows.Forms.Label();
             this.greenLabel = new System.Windows.Forms.Label();
             this.redLabel = new System.Windows.Forms.Label();
+            this.tb_Calendar = new System.Windows.Forms.TabPage();
+            this.tlp_Calendar = new System.Windows.Forms.TableLayoutPanel();
+            this.dtp_DateToCalendar = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -120,6 +124,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tb_Red)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_Green)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_Blue)).BeginInit();
+            this.tb_Calendar.SuspendLayout();
+            this.tlp_Calendar.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -491,6 +497,7 @@
             this.tc_Menu.Controls.Add(this.tb_LifeTime);
             this.tc_Menu.Controls.Add(this.tb_CursValue);
             this.tc_Menu.Controls.Add(this.ColorPicker);
+            this.tc_Menu.Controls.Add(this.tb_Calendar);
             this.tc_Menu.Location = new System.Drawing.Point(0, 52);
             this.tc_Menu.Name = "tc_Menu";
             this.tc_Menu.SelectedIndex = 0;
@@ -830,6 +837,50 @@
             this.redLabel.Text = "255";
             this.redLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tb_Calendar
+            // 
+            this.tb_Calendar.Controls.Add(this.tlp_Calendar);
+            this.tb_Calendar.Location = new System.Drawing.Point(4, 22);
+            this.tb_Calendar.Name = "tb_Calendar";
+            this.tb_Calendar.Size = new System.Drawing.Size(845, 347);
+            this.tb_Calendar.TabIndex = 5;
+            this.tb_Calendar.Text = "Календарь";
+            this.tb_Calendar.UseVisualStyleBackColor = true;
+            // 
+            // tlp_Calendar
+            // 
+            this.tlp_Calendar.ColumnCount = 2;
+            this.tlp_Calendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp_Calendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp_Calendar.Controls.Add(this.dtp_DateToCalendar, 0, 0);
+            this.tlp_Calendar.Controls.Add(this.textBox1, 1, 0);
+            this.tlp_Calendar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlp_Calendar.Location = new System.Drawing.Point(0, 0);
+            this.tlp_Calendar.Name = "tlp_Calendar";
+            this.tlp_Calendar.RowCount = 2;
+            this.tlp_Calendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp_Calendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlp_Calendar.Size = new System.Drawing.Size(845, 347);
+            this.tlp_Calendar.TabIndex = 0;
+            // 
+            // dtp_DateToCalendar
+            // 
+            this.dtp_DateToCalendar.Location = new System.Drawing.Point(3, 3);
+            this.dtp_DateToCalendar.Name = "dtp_DateToCalendar";
+            this.dtp_DateToCalendar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtp_DateToCalendar.Size = new System.Drawing.Size(247, 20);
+            this.dtp_DateToCalendar.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(425, 3);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(417, 167);
+            this.textBox1.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -869,6 +920,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tb_Red)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_Green)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_Blue)).EndInit();
+            this.tb_Calendar.ResumeLayout(false);
+            this.tlp_Calendar.ResumeLayout(false);
+            this.tlp_Calendar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -949,6 +1003,10 @@
         private System.Windows.Forms.Label blueLabel;
         private System.Windows.Forms.Label greenLabel;
         private System.Windows.Forms.Label redLabel;
+        private System.Windows.Forms.TabPage tb_Calendar;
+        private System.Windows.Forms.TableLayoutPanel tlp_Calendar;
+        private System.Windows.Forms.DateTimePicker dtp_DateToCalendar;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

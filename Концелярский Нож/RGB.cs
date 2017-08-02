@@ -1,7 +1,6 @@
 ﻿namespace Концелярский_Нож
 {
     using System.Drawing;
-
     public class Rgb
     {
         private byte r, g, b;

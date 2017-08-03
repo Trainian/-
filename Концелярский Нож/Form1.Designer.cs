@@ -94,21 +94,15 @@
             this.rtb_CoursValue = new System.Windows.Forms.RichTextBox();
             this.ColorPicker = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.numericUpDownGreen = new System.Windows.Forms.NumericUpDown();
             this.pb_ColorCreater = new System.Windows.Forms.PictureBox();
             this.tb_Red = new System.Windows.Forms.TrackBar();
             this.tb_Green = new System.Windows.Forms.TrackBar();
             this.tb_Blue = new System.Windows.Forms.TrackBar();
+            this.numericUpDownRed = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownBlue = new System.Windows.Forms.NumericUpDown();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timer_Remember = new System.Windows.Forms.Timer(this.components);
-            this.blueLabel = new System.Windows.Forms.Label();
-            this.greenLabel = new System.Windows.Forms.Label();
-            this.redLabel = new System.Windows.Forms.Label();
-            this.tb_Calendar = new System.Windows.Forms.TabPage();
-            this.tlp_Calendar = new System.Windows.Forms.TableLayoutPanel();
-            this.dtp_DateToCalendar = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.tsb_About = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -122,13 +116,13 @@
             this.tb_CursValue.SuspendLayout();
             this.ColorPicker.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ColorCreater)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_Red)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_Green)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_Blue)).BeginInit();
-            this.tb_Calendar.SuspendLayout();
-            this.tlp_Calendar.SuspendLayout();
-            this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBlue)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -500,7 +494,6 @@
             this.tc_Menu.Controls.Add(this.tb_LifeTime);
             this.tc_Menu.Controls.Add(this.tb_CursValue);
             this.tc_Menu.Controls.Add(this.ColorPicker);
-            this.tc_Menu.Controls.Add(this.tb_Calendar);
             this.tc_Menu.Location = new System.Drawing.Point(0, 52);
             this.tc_Menu.Name = "tc_Menu";
             this.tc_Menu.SelectedIndex = 0;
@@ -707,13 +700,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 610F));
-            this.tableLayoutPanel1.Controls.Add(this.blueLabel, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.greenLabel, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.redLabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDownGreen, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.pb_ColorCreater, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.tb_Red, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tb_Green, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tb_Blue, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDownRed, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.numericUpDownBlue, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -742,6 +735,20 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 341F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(839, 341);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // numericUpDownGreen
+            // 
+            this.numericUpDownGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.numericUpDownGreen.ForeColor = System.Drawing.Color.White;
+            this.numericUpDownGreen.Location = new System.Drawing.Point(80, 324);
+            this.numericUpDownGreen.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.numericUpDownGreen.Name = "numericUpDownGreen";
+            this.numericUpDownGreen.Size = new System.Drawing.Size(70, 20);
+            this.numericUpDownGreen.TabIndex = 5;
             // 
             // pb_ColorCreater
             // 
@@ -790,6 +797,34 @@
             this.tb_Blue.TabIndex = 1;
             this.tb_Blue.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
+            // numericUpDownRed
+            // 
+            this.numericUpDownRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.numericUpDownRed.ForeColor = System.Drawing.Color.White;
+            this.numericUpDownRed.Location = new System.Drawing.Point(3, 324);
+            this.numericUpDownRed.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.numericUpDownRed.Name = "numericUpDownRed";
+            this.numericUpDownRed.Size = new System.Drawing.Size(71, 20);
+            this.numericUpDownRed.TabIndex = 2;
+            // 
+            // numericUpDownBlue
+            // 
+            this.numericUpDownBlue.BackColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDownBlue.ForeColor = System.Drawing.Color.White;
+            this.numericUpDownBlue.Location = new System.Drawing.Point(156, 324);
+            this.numericUpDownBlue.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.numericUpDownBlue.Name = "numericUpDownBlue";
+            this.numericUpDownBlue.Size = new System.Drawing.Size(70, 20);
+            this.numericUpDownBlue.TabIndex = 4;
+            // 
             // timer
             // 
             this.timer.Enabled = true;
@@ -800,110 +835,6 @@
             // 
             this.timer_Remember.Interval = 1000;
             this.timer_Remember.Tick += new System.EventHandler(this.timer_Remember_Tick);
-            // 
-            // blueLabel
-            // 
-            this.blueLabel.AutoSize = true;
-            this.blueLabel.BackColor = System.Drawing.Color.Blue;
-            this.blueLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.blueLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.blueLabel.Location = new System.Drawing.Point(156, 321);
-            this.blueLabel.Name = "blueLabel";
-            this.blueLabel.Size = new System.Drawing.Size(70, 20);
-            this.blueLabel.TabIndex = 4;
-            this.blueLabel.Text = "255";
-            this.blueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // greenLabel
-            // 
-            this.greenLabel.AutoSize = true;
-            this.greenLabel.BackColor = System.Drawing.Color.Green;
-            this.greenLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.greenLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.greenLabel.Location = new System.Drawing.Point(80, 321);
-            this.greenLabel.Name = "greenLabel";
-            this.greenLabel.Size = new System.Drawing.Size(70, 20);
-            this.greenLabel.TabIndex = 5;
-            this.greenLabel.Text = "255";
-            this.greenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // redLabel
-            // 
-            this.redLabel.AutoSize = true;
-            this.redLabel.BackColor = System.Drawing.Color.Red;
-            this.redLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.redLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.redLabel.Location = new System.Drawing.Point(3, 321);
-            this.redLabel.Name = "redLabel";
-            this.redLabel.Size = new System.Drawing.Size(71, 20);
-            this.redLabel.TabIndex = 6;
-            this.redLabel.Text = "255";
-            this.redLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tb_Calendar
-            // 
-            this.tb_Calendar.Controls.Add(this.toolStrip2);
-            this.tb_Calendar.Controls.Add(this.tlp_Calendar);
-            this.tb_Calendar.Location = new System.Drawing.Point(4, 22);
-            this.tb_Calendar.Name = "tb_Calendar";
-            this.tb_Calendar.Size = new System.Drawing.Size(845, 347);
-            this.tb_Calendar.TabIndex = 5;
-            this.tb_Calendar.Text = "Календарь";
-            this.tb_Calendar.UseVisualStyleBackColor = true;
-            // 
-            // tlp_Calendar
-            // 
-            this.tlp_Calendar.ColumnCount = 2;
-            this.tlp_Calendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp_Calendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp_Calendar.Controls.Add(this.dtp_DateToCalendar, 0, 0);
-            this.tlp_Calendar.Controls.Add(this.textBox1, 1, 0);
-            this.tlp_Calendar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp_Calendar.Location = new System.Drawing.Point(0, 0);
-            this.tlp_Calendar.Name = "tlp_Calendar";
-            this.tlp_Calendar.Padding = new System.Windows.Forms.Padding(0, 25, 0, 0);
-            this.tlp_Calendar.RowCount = 2;
-            this.tlp_Calendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp_Calendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlp_Calendar.Size = new System.Drawing.Size(845, 347);
-            this.tlp_Calendar.TabIndex = 0;
-            // 
-            // dtp_DateToCalendar
-            // 
-            this.dtp_DateToCalendar.Location = new System.Drawing.Point(3, 28);
-            this.dtp_DateToCalendar.Name = "dtp_DateToCalendar";
-            this.dtp_DateToCalendar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtp_DateToCalendar.Size = new System.Drawing.Size(247, 20);
-            this.dtp_DateToCalendar.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(425, 28);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(417, 155);
-            this.textBox1.TabIndex = 1;
-            // 
-            // toolStrip2
-            // 
-            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsb_About});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(845, 25);
-            this.toolStrip2.TabIndex = 1;
-            this.toolStrip2.Text = "toolStrip2";
-            // 
-            // tsb_About
-            // 
-            this.tsb_About.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsb_About.Image = ((System.Drawing.Image)(resources.GetObject("tsb_About.Image")));
-            this.tsb_About.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsb_About.Name = "tsb_About";
-            this.tsb_About.Size = new System.Drawing.Size(44, 22);
-            this.tsb_About.Text = "About";
             // 
             // Form1
             // 
@@ -940,16 +871,13 @@
             this.ColorPicker.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ColorCreater)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_Red)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_Green)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_Blue)).EndInit();
-            this.tb_Calendar.ResumeLayout(false);
-            this.tb_Calendar.PerformLayout();
-            this.tlp_Calendar.ResumeLayout(false);
-            this.tlp_Calendar.PerformLayout();
-            this.toolStrip2.ResumeLayout(false);
-            this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBlue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1027,15 +955,9 @@
         private System.Windows.Forms.TrackBar tb_Red;
         private System.Windows.Forms.TrackBar tb_Green;
         private System.Windows.Forms.TrackBar tb_Blue;
-        private System.Windows.Forms.Label blueLabel;
-        private System.Windows.Forms.Label greenLabel;
-        private System.Windows.Forms.Label redLabel;
-        private System.Windows.Forms.TabPage tb_Calendar;
-        private System.Windows.Forms.TableLayoutPanel tlp_Calendar;
-        private System.Windows.Forms.DateTimePicker dtp_DateToCalendar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton tsb_About;
+        private System.Windows.Forms.NumericUpDown numericUpDownRed;
+        private System.Windows.Forms.NumericUpDown numericUpDownGreen;
+        private System.Windows.Forms.NumericUpDown numericUpDownBlue;
     }
 }
 

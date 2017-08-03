@@ -63,6 +63,12 @@ namespace Концелярский_Нож
             this.redLabel.DataBindings.Add("Text", this.tb_Red, "Value");
             this.blueLabel.DataBindings.Add("Text", this.tb_Blue, "Value");
             this.greenLabel.DataBindings.Add("Text", this.tb_Green, "Value");
+
+
+            // Calendar
+            this.bindSrc.DataSource = typeof(Memo);
+            this.bindSrc.AddNew();
+            this.bindSrc[0] = this.memo;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

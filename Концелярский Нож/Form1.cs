@@ -21,6 +21,9 @@ namespace Концелярский_Нож
     {
         private string notepadFilename;
 
+        public BindingSource bindSrc = new BindingSource();
+        public Memo memo = new Memo();
+
         private bool textChanged;
         public Form1()
         {
@@ -56,20 +59,25 @@ namespace Концелярский_Нож
             this.tb_Blue.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged;
 
             // Binding Numeric Values
-            numericUpDownRed.DataBindings.Add("Value", rgb, "Red");
-            numericUpDownRed.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged;
+            this.numericUpDownRed.DataBindings.Add("Value", rgb, "Red");
+            this.numericUpDownRed.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged;
 
-            numericUpDownBlue.DataBindings.Add("Value", rgb, "Blue");
-            numericUpDownBlue.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged;
+            this.numericUpDownBlue.DataBindings.Add("Value", rgb, "Blue");
+            this.numericUpDownBlue.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged;
 
-            numericUpDownGreen.DataBindings.Add("Value", rgb, "Green");
-            numericUpDownGreen.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged;
+            this.numericUpDownGreen.DataBindings.Add("Value", rgb, "Green");
+            this.numericUpDownGreen.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged;
 
 
             // Calendar
             this.bindSrc.DataSource = typeof(Memo);
             this.bindSrc.AddNew();
             this.bindSrc[0] = this.memo;
+            this.dtp_Memo.DataBindings.Add("Value", this.bindSrc, "MemoDate");
+            this.dtp_Memo.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged;
+            this.tb_Memo.DataBindings.Add("Text", this.bindSrc, "MemoText");
+            this.tb_Memo.DataBindings[0].DataSourceUpdateMode = DataSourceUpdateMode.OnPropertyChanged;
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -214,6 +222,11 @@ namespace Концелярский_Нож
             //    obj = (xmlFormat.Deserialize(sr) as ValuteCursOnDate);
             //    sr.Close();
             //}
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this.memo.MemoDate + " " + this.memo.MemoText);
         }
     }
 }

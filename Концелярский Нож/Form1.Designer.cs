@@ -92,7 +92,7 @@
             this.dtp_StartTime = new System.Windows.Forms.DateTimePicker();
             this.tb_CursValue = new System.Windows.Forms.TabPage();
             this.rtb_CoursValue = new System.Windows.Forms.RichTextBox();
-            this.ColorPicker = new System.Windows.Forms.TabPage();
+            this.tb_ColorPicker = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.numericUpDownGreen = new System.Windows.Forms.NumericUpDown();
             this.pb_ColorCreater = new System.Windows.Forms.PictureBox();
@@ -103,6 +103,12 @@
             this.numericUpDownBlue = new System.Windows.Forms.NumericUpDown();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.timer_Remember = new System.Windows.Forms.Timer(this.components);
+            this.tb_Calendar = new System.Windows.Forms.TabPage();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.dtp_Memo = new System.Windows.Forms.DateTimePicker();
+            this.tb_Memo = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -114,7 +120,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTimer)).BeginInit();
             this.tb_LifeTime.SuspendLayout();
             this.tb_CursValue.SuspendLayout();
-            this.ColorPicker.SuspendLayout();
+            this.tb_ColorPicker.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_ColorCreater)).BeginInit();
@@ -123,6 +129,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tb_Blue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBlue)).BeginInit();
+            this.tb_Calendar.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -493,7 +502,8 @@
             this.tc_Menu.Controls.Add(this.tp_Remember);
             this.tc_Menu.Controls.Add(this.tb_LifeTime);
             this.tc_Menu.Controls.Add(this.tb_CursValue);
-            this.tc_Menu.Controls.Add(this.ColorPicker);
+            this.tc_Menu.Controls.Add(this.tb_ColorPicker);
+            this.tc_Menu.Controls.Add(this.tb_Calendar);
             this.tc_Menu.Location = new System.Drawing.Point(0, 52);
             this.tc_Menu.Name = "tc_Menu";
             this.tc_Menu.SelectedIndex = 0;
@@ -682,16 +692,16 @@
             this.rtb_CoursValue.TabIndex = 0;
             this.rtb_CoursValue.Text = "";
             // 
-            // ColorPicker
+            // tb_ColorPicker
             // 
-            this.ColorPicker.Controls.Add(this.tableLayoutPanel1);
-            this.ColorPicker.Location = new System.Drawing.Point(4, 22);
-            this.ColorPicker.Name = "ColorPicker";
-            this.ColorPicker.Padding = new System.Windows.Forms.Padding(3);
-            this.ColorPicker.Size = new System.Drawing.Size(845, 347);
-            this.ColorPicker.TabIndex = 4;
-            this.ColorPicker.Text = "Подбор цвета";
-            this.ColorPicker.UseVisualStyleBackColor = true;
+            this.tb_ColorPicker.Controls.Add(this.tableLayoutPanel1);
+            this.tb_ColorPicker.Location = new System.Drawing.Point(4, 22);
+            this.tb_ColorPicker.Name = "tb_ColorPicker";
+            this.tb_ColorPicker.Padding = new System.Windows.Forms.Padding(3);
+            this.tb_ColorPicker.Size = new System.Drawing.Size(845, 347);
+            this.tb_ColorPicker.TabIndex = 4;
+            this.tb_ColorPicker.Text = "Подбор цвета";
+            this.tb_ColorPicker.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -836,6 +846,71 @@
             this.timer_Remember.Interval = 1000;
             this.timer_Remember.Tick += new System.EventHandler(this.timer_Remember_Tick);
             // 
+            // tb_Calendar
+            // 
+            this.tb_Calendar.Controls.Add(this.tableLayoutPanel2);
+            this.tb_Calendar.Controls.Add(this.toolStrip2);
+            this.tb_Calendar.Location = new System.Drawing.Point(4, 22);
+            this.tb_Calendar.Name = "tb_Calendar";
+            this.tb_Calendar.Size = new System.Drawing.Size(845, 347);
+            this.tb_Calendar.TabIndex = 5;
+            this.tb_Calendar.Text = "Календарь";
+            this.tb_Calendar.UseVisualStyleBackColor = true;
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(845, 25);
+            this.toolStrip2.TabIndex = 0;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(44, 22);
+            this.toolStripButton1.Text = "About";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.dtp_Memo, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tb_Memo, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 25);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(845, 322);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // dtp_Memo
+            // 
+            this.dtp_Memo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtp_Memo.Location = new System.Drawing.Point(3, 3);
+            this.dtp_Memo.Name = "dtp_Memo";
+            this.dtp_Memo.Size = new System.Drawing.Size(416, 20);
+            this.dtp_Memo.TabIndex = 0;
+            // 
+            // tb_Memo
+            // 
+            this.tb_Memo.BackColor = System.Drawing.SystemColors.Info;
+            this.tb_Memo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tb_Memo.Location = new System.Drawing.Point(425, 3);
+            this.tb_Memo.Multiline = true;
+            this.tb_Memo.Name = "tb_Memo";
+            this.tb_Memo.Size = new System.Drawing.Size(417, 155);
+            this.tb_Memo.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -868,7 +943,7 @@
             this.tb_LifeTime.ResumeLayout(false);
             this.tb_LifeTime.PerformLayout();
             this.tb_CursValue.ResumeLayout(false);
-            this.ColorPicker.ResumeLayout(false);
+            this.tb_ColorPicker.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGreen)).EndInit();
@@ -878,6 +953,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.tb_Blue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBlue)).EndInit();
+            this.tb_Calendar.ResumeLayout(false);
+            this.tb_Calendar.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -949,7 +1030,7 @@
         private System.Windows.Forms.DateTimePicker dtp_StartTime;
         private System.Windows.Forms.TabPage tb_CursValue;
         private System.Windows.Forms.RichTextBox rtb_CoursValue;
-        private System.Windows.Forms.TabPage ColorPicker;
+        private System.Windows.Forms.TabPage tb_ColorPicker;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pb_ColorCreater;
         private System.Windows.Forms.TrackBar tb_Red;
@@ -958,6 +1039,12 @@
         private System.Windows.Forms.NumericUpDown numericUpDownRed;
         private System.Windows.Forms.NumericUpDown numericUpDownGreen;
         private System.Windows.Forms.NumericUpDown numericUpDownBlue;
+        private System.Windows.Forms.TabPage tb_Calendar;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.DateTimePicker dtp_Memo;
+        private System.Windows.Forms.TextBox tb_Memo;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 

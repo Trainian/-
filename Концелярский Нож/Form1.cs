@@ -209,7 +209,7 @@ namespace Концелярский_Нож
         {
             RBKServise.DailyInfo dayInfo = new RBKServise.DailyInfo();
             XmlNode XMLCourse = dayInfo.GetCursOnDateXML(DateTime.Today);
-            this.rtb_CoursValue.Text = XMLCourse.InnerXml;
+            //this.rtb_CoursValue.Text = XMLCourse.InnerXml;
 
             //ValuteCursOnDate rs = new ValuteCursOnDate();
             //ValuteCursOnDate.LoadFromeXmlFormat(ref rs, XMLCourse.InnerXml);
@@ -222,6 +222,14 @@ namespace Концелярский_Нож
             //    obj = (xmlFormat.Deserialize(sr) as ValuteCursOnDate);
             //    sr.Close();
             //}
+
+            string DefaultText = XMLCourse.InnerXml; // Дефолтный текст
+            string[] Delimiter = { "<ValuteCursOnDate>", "</ValuteCursOnDate>", "<Vname>", "<Vnom>",
+                "<Vcurs>", "<Vcode>", "</Vname>", "</Vnom>", "</Vcurs>", "</Vcode>", "<VchCode>", "</VchCode>" }; // Разделители
+            string[] str = DefaultText.Split(Delimiter, StringSplitOptions.RemoveEmptyEntries); // Парсим текст на строки по разделителям
+
+            foreach (string line in str)
+                rtb_CoursValue.Text += line + Environment.NewLine;     // Печатаем каждую строку в RTB
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

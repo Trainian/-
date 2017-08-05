@@ -7,8 +7,7 @@ using System.Linq;
 
 namespace Концелярский_Нож
 {
-    using DevExpress.Utils.Extensions;
-
+    
     public class MemoFiles
     {
         List<Memo> list = new List<Memo>();
@@ -19,7 +18,7 @@ namespace Концелярский_Нож
             set => this.list = value;
         }
 
-        public IEnumerable<DateTime>[] GetDates
+        public DateTime[] GetDates
         {
             get
             {
